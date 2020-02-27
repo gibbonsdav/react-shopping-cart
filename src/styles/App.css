@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.buttons {
+  width: 250px;
+}
+
+.maingrid {
+  width: 1000px;
+  display: grid;
+  grid-template-areas: "pic pic pic pic";
+}
+
+.product {
+  /* grid-area: pic; */
+  width: 250px;
+  max-height: 350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.shirtpics {
+  height: 333px;
+  width: 229px;
+  padding: 10px;
+  margin: 10px;
+}
