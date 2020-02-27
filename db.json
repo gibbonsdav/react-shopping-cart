@@ -305,5 +305,6 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     }
-  ]
+  ],
+  "cart": []
 }

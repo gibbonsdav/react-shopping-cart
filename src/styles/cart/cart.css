@@ -1,0 +1,26 @@
+.cartcontain {
+  width: 440px;
+  background: rgb(27, 25, 33);
+  width: 440px;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  color: white;
+}
+
+.incartcart {
+  color: white;
+  background: transparent;
+  font-size: xx-large;
+  outline: none;
+  border: none;
+  text-align: center;
+  text-justify: center;
+  /* justify-content: center; */
+  /* align-content: center; */
+  padding-left: 10px;
+  position: absolute;
+  right: 45%;
+  top: 50px;
+}
