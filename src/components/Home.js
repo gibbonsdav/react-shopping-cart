@@ -39,7 +39,12 @@ export default props => {
               </p>
               <p className="shipping">Free Shipping</p>
               <div>
-                <button className="cart">Add to Cart</button>
+                <button
+                  onClick={e => addEventListener(product)}
+                  className="cart"
+                >
+                  Add to Cart
+                </button>
               </div>
             </Link>
           ))}

@@ -29,6 +29,26 @@ function someSyncAction() {
   }
 }
 
+// function getItems() {
+//   return dispatch => {
+//     axios.get("/products").then(resp => {
+//       dispatch(getCount())
+//       dispatch({
+//         type: GET_ITEMS,
+//         payload: resp.data
+//       })
+//     })
+//   }
+// }
+
+// function addItem(text) {
+//   return dispatch => {
+//     axios.post("/products", { text, status: "active" }).then(resp => {
+//       dispatch(getItems())
+//     })
+//   }
+// }
+
 function someAsyncAction() {
   return dispatch => {
     setTimeout(() => {
