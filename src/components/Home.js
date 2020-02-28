@@ -35,12 +35,12 @@ export default props => {
               <p className="title">{product.title}</p>
               <p className="title">
                 {product.currencyFormat}
-                {product.price}
+                {product.price.toFixed(2)}
               </p>
               <p className="shipping">Free Shipping</p>
               <div>
                 <button
-                  onClick={e => addEventListener(product)}
+                  // onClick={e => addEventListener(product)}
                   className="cart"
                 >
                   Add to Cart
