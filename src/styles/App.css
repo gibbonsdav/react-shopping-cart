@@ -116,3 +116,7 @@ html {
   align-content: center;
   padding-left: 10px;
 }
+
+.cartbutton::after .cartcontain {
+  width: 440px;
+}

@@ -10,6 +10,9 @@ export default props => {
   useEffect(() => {
     getProducts().then(data => setProducts(data))
   }, [])
+
+  function biggerCart() {}
+
   return (
     <div className="container">
       <div className="buttons">
@@ -22,7 +25,7 @@ export default props => {
         <button>XXL</button>
       </div>
       <div className="popout">
-        <button className="cartbutton">
+        <button onclick="biggerCart" className="cartbutton">
           <FiShoppingCart />
         </button>
       </div>
@@ -40,7 +43,7 @@ export default props => {
               <p className="shipping">Free Shipping</p>
               <div>
                 <button
-                  // onClick={e => addEventListener(product)}
+                  onClick={e => window.addEventListener(product)}
                   className="cart"
                 >
                   Add to Cart

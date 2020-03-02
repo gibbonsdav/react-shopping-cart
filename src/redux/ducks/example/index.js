@@ -12,7 +12,7 @@ const GET_ITEMS = "item/GET_ITEMS"
 const SET_COUNT = "item/SET_COUNT"
 
 const initialState = {
-  todos: [],
+  items: [],
   count: 0
 }
 
@@ -38,25 +38,26 @@ function someSyncAction() {
   }
 }
 
-function getItems() {
-  return dispatch => {
-    axios.get("/products").then(resp => {
-      dispatch(getCount())
-      dispatch({
-        type: GET_ITEMS,
-        payload: resp.data
-      })
-    })
-  }
-}
-
-// function addItem(text) {
+// function getProducts() {
 //   return dispatch => {
-//     axios.post("/products", { text, status: "active" }).then(resp => {
-//       dispatch(getItems())
+//     axios.get("/products").then(resp => {
+//       dispatch(getCount())
+//       dispatch({
+//         type: GET_PRODUCTS,
+//         payload: resp.data
+//       })
 //     })
 //   }
 // }
+
+export function addProducts() {
+  const products = []
+  return dispatch => {
+    axios.post("/cart", { products, status: "active" }).then(resp => {
+      dispatch(getProducts())
+    })
+  }
+}
 
 function someAsyncAction() {
   return dispatch => {
@@ -106,3 +107,20 @@ function getCount() {
     })
   }
 }
+
+// export function useItems() {
+//   const dispatch = useDispatch()
+//   const items = useSelector(appState => appState.itemState.items)
+//   const count = useSelector(appState => appState.itemState.count)
+//   const add = text => dispatch(addItem(text))
+// // const del = id => dispatch(deleteItem(id))
+// const toggle = id => dispatch(toggleItem(id))
+// const filter = filter => dispatch(filterItems(filter))
+// const clear = () => dispatch(clearItems())
+
+// useEffect(() => {
+//   dispatch(getItems())
+// }, [dispatch])
+
+// return { items, add, count }
+// }
