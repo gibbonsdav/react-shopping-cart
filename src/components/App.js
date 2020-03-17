@@ -10,7 +10,7 @@ export default function() {
     <Router>
       <div>
         <Route exact path="/" component={Home} />
-        <Route path="/cart" component={Cart} />
+        <Route path="/" component={Cart} />
       </div>
     </Router>
   )
