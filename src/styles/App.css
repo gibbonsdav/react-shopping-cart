@@ -77,6 +77,10 @@ html {
   background-color: rgb(239, 195, 0);
 }
 
+.product button:hover {
+  background-color: rgb(239, 195, 0);
+}
+
 .product > a:hover {
   border: 1px solid lightgrey;
 }

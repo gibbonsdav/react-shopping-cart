@@ -28,6 +28,7 @@ export default (props) => {
 
         <div className="total">
           <h2>Total: ${total}</h2>
+          <button>Checkout</button>
         </div>
       </div>
     </div>
