@@ -4,7 +4,7 @@ import { FiShoppingCart } from "react-icons/fi"
 import { useCart } from "../redux/ducks/cart"
 import "../styles/cart/cart.css"
 
-export default props => {
+export default (props) => {
   const { cart, isOpen, toggle } = useCart()
 
   const total = cart.reduce((a, b) => a + b.price, 0).toFixed(2)
@@ -12,16 +12,16 @@ export default props => {
   return (
     <div className={`cartcontain ${isOpen && " open"}`}>
       <button className="incartcart">
-        <FiShoppingCart onClick={e => toggle()} />
+        <FiShoppingCart onClick={(e) => toggle()} />
       </button>
       <p>Cart</p>
       <div className="list">
-        {cart.map(product => (
+        {cart.map((product) => (
           <div className="product cart">
             <div className="innercart">
               <img src={product.img.thumb} />
               <p>{product.title}</p>
-              <p>{product.price}</p>
+              <p>{product.price.toFixed(2)}</p>
             </div>
           </div>
         ))}
