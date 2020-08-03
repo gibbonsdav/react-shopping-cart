@@ -71,6 +71,7 @@ html {
   height: 49px;
   background-color: rgb(27, 25, 33);
   color: white;
+  cursor: pointer;
 }
 
 .product > a:hover .cart {

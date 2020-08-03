@@ -51,10 +51,15 @@
 
 .innercart > img {
   width: 60px;
+  height: 80px;
   margin: 10px;
 }
 
 .total {
   position: absolute;
   top: 500px;
+}
+
+.cart {
+  height: 80px;
 }
