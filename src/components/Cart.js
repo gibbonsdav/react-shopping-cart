@@ -14,7 +14,7 @@ export default (props) => {
       <button className="incartcart">
         <FiShoppingCart onClick={(e) => toggle()} />
       </button>
-      <p>Cart</p>
+      <p>Shopping Cart</p>
       <div className="list">
         {cart.map((product) => (
           <div className="product cart">
@@ -28,7 +28,7 @@ export default (props) => {
 
         <div className="total">
           <h2>Total: ${total}</h2>
-          <button>Checkout</button>
+          <button className="ui button active check">Checkout</button>
         </div>
       </div>
     </div>
