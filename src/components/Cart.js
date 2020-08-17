@@ -14,14 +14,16 @@ export default (props) => {
       <button className="incartcart">
         <FiShoppingCart onClick={(e) => toggle()} />
       </button>
-      <p>Shopping Cart</p>
       <div className="list">
+        <p>You have {cart.length} items in your cart.</p>
         {cart.map((product) => (
           <div className="product cart">
             <div className="innercart">
               <img src={product.img.thumb} />
               <p>{product.title}</p>
               <p>{product.price.toFixed(2)}</p>
+              {/* Need reducer */}
+              {/* <button onClick={(e) => del(item)}>X</button> */}
             </div>
           </div>
         ))}
