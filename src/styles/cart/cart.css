@@ -63,3 +63,18 @@
 .product.cart {
   height: 80px;
 }
+
+#plus {
+  background: white;
+  height: 50px;
+  width: 60px;
+  margin-top: 20px;
+}
+
+#minus {
+  background: white;
+  height: 50px;
+  width: 60px;
+  font-size: x-small;
+  margin-top: 20px;
+}

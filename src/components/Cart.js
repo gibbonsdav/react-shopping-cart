@@ -5,7 +5,7 @@ import { useCart } from "../redux/ducks/cart"
 import "../styles/cart/cart.css"
 
 export default (props) => {
-  const { cart, isOpen, toggle, remove } = useCart()
+  const { cart, isOpen, toggle, remove, add } = useCart()
 
   const total = cart.reduce((a, b) => a + b.price * b.quantity, 0).toFixed(2)
 
@@ -24,10 +24,18 @@ export default (props) => {
               <p>{product.price.toFixed(2)}</p>
               <p>quantity: {product.quantity}</p>
               <button
-                className="ui button primary"
+                id="minus"
+                className="ui button white small"
                 onClick={(e) => remove(product.id)}
               >
                 Remove
+              </button>
+              <button
+                id="plus"
+                className="ui button white x-small"
+                onClick={(e) => add(product)}
+              >
+                +
               </button>
             </div>
           </div>
