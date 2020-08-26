@@ -22,6 +22,7 @@ export default (props) => {
               <img src={product.img.thumb} />
               <p>{product.title}</p>
               <p>{product.price.toFixed(2)}</p>
+              <p>quantity: {product.quantity}</p>
               <button onClick={(e) => remove(product.id)}>Remove</button>
             </div>
           </div>
