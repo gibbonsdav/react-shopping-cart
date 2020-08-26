@@ -10,7 +10,7 @@ export default (props) => {
   const total = cart.reduce((a, b) => a + b.price * b.quantity, 0).toFixed(2)
 
   return (
-    <div className={`cartcontain ${isOpen && " open"}`}>
+    <div className={`cartcontain ${isOpen && " open"}`} wholecart>
       <button className="incartcart">
         <FiShoppingCart onClick={(e) => toggle()} />
       </button>
@@ -25,14 +25,14 @@ export default (props) => {
               <p>quantity: {product.quantity}</p>
               <button
                 id="minus"
-                className="ui button white small"
+                className="ui button"
                 onClick={(e) => remove(product.id)}
               >
                 Remove
               </button>
               <button
                 id="plus"
-                className="ui button white x-small"
+                className="ui button"
                 onClick={(e) => add(product)}
               >
                 +
