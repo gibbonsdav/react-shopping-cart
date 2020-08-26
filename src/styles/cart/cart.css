@@ -46,8 +46,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
-  scrollbar-color: white;
+  overflow-y: scroll;
+  scrollbar-color: yellow;
   width: 440px;
   height: 490px;
 }
