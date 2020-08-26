@@ -5,7 +5,7 @@ import { useCart } from "../redux/ducks/cart"
 import "../styles/cart/cart.css"
 
 export default (props) => {
-  const { cart, isOpen, toggle } = useCart()
+  const { cart, isOpen, toggle, remove } = useCart()
 
   const total = cart.reduce((a, b) => a + b.price, 0).toFixed(2)
 
@@ -22,8 +22,7 @@ export default (props) => {
               <img src={product.img.thumb} />
               <p>{product.title}</p>
               <p>{product.price.toFixed(2)}</p>
-              {/* Need reducer */}
-              {/* <button onClick={(e) => del(item)}>X</button> */}
+              <button onClick={(e) => remove(product.id)}>Remove</button>
             </div>
           </div>
         ))}
