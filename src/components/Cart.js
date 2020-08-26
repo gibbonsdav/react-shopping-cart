@@ -7,7 +7,7 @@ import "../styles/cart/cart.css"
 export default (props) => {
   const { cart, isOpen, toggle, remove } = useCart()
 
-  const total = cart.reduce((a, b) => a + b.price, 0).toFixed(2)
+  const total = cart.reduce((a, b) => a + b.price * b.quantity, 0).toFixed(2)
 
   return (
     <div className={`cartcontain ${isOpen && " open"}`}>
@@ -23,7 +23,12 @@ export default (props) => {
               <p>{product.title}</p>
               <p>{product.price.toFixed(2)}</p>
               <p>quantity: {product.quantity}</p>
-              <button onClick={(e) => remove(product.id)}>Remove</button>
+              <button
+                className="ui button primary"
+                onClick={(e) => remove(product.id)}
+              >
+                Remove
+              </button>
             </div>
           </div>
         ))}
